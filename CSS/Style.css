@@ -1,5 +1,10 @@
 /*
- * Layouts
+ * Import CSS
+ */
+@import "Fonts.css";
+
+/*
+ * Layouts & General
  */
 html,body {
     height: 100vh;
@@ -7,16 +12,26 @@ html,body {
     padding: 0;
     background-color: #000000;
     color: #ffffff;
+    font-family: Roboto;
 }
 header {
     min-height: 57px;
 }
-
+h1,h2 {
+    font-weight: bold;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
 /*
  * Navbar
  */
 .navbar {
     border-bottom: solid 1px #ffffff;
+    background-color: #000000;
 }
 .nav-item {
     margin-left: 1rem;
@@ -32,4 +47,30 @@ header {
 .nav-link:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+/*
+ * Footer
+ */
+.footer {
+    border-top: solid 1px #ffffff;
+}
+.footer-link {
+    color: #ffffff;
+}
+.footer-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/*
+ * Sections
+ */
+.content {
+    min-height: calc(80vh - 57px);
+    border-bottom: solid 1px #ffffff;
+    padding: 50px 0 50px 0;
+}
+#contact {
+    border-bottom: none;
 }
