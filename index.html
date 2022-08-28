@@ -2,90 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lorenz Hinterberger</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="CSS/Style.css">
     <script src="JavaScripts/Script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse container" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#biography">Biographie</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#program">Neues Programm</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tickets">Tickets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Kontakt</a>
-                    </li>
-                </ul>
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#biography">Biographie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#program">Programm | Tickets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+<main>
+    <div class="wrapper">
+        <section id="home" class="under content">
+            <div class="container">
+                <!--<h1>Lorenz Hinterberger</h1>
+                <img class="logo" src="Resources/Images/logo.jpeg">-->
             </div>
-        </nav>
-    </header>
-    <main class="container">
-        <section id="home" class="content">
-            <h1>Lorenz Hinterberger</h1>
         </section>
-        <section id="biography" class="content">
-            <h2>Biographie</h2>
+    </div>
+    <div class="d-flex over fadeFooter">
+        <div class="display-4 mx-auto mt-auto mb-2"><i class="bi bi-chevron-double-down"></i></div>
+    </div>
+    <section id="biography" class="content">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+            <div>
+                <img alt="..." src="Resources/Images/bio1.jpg"/>
+            </div>
+            <div class="px-5">
+                <h2>Biographie</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis
+                    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+                    eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+                    luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="program" class="content">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+            <div class="px-5">
+                <h2>Tickets</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis
+                    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+                    eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+                    luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                </p>
+            </div>
+            <div>
+                <img alt="..." src="Resources/Images/tickets1.jpg"/>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="content">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+            <div>
+                <img alt="..." src="Resources/Images/contact1.jpg"/>
+            </div>
+            <div class="px-5">
+                <h2>Kontakt</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis
+                    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+                    eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+                    luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                </p>
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer">
+        <div class="container pt-4 pb-4">
             <div class="row">
-                <div class="col col-lg-8">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                </div>
-                <div class="col col-lg-4">
-                    <img src="Resources/Images/6-Lorenz-Hinterberger-480x853-868412270.jpg">
-                </div>
-            </div>
-        </section>
-        <section id="program" class="content">
-            <h2>Neues Programm</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-            </p>
-        </section>
-        <section id="tickets" class="content">
-            <h2>Tickets</h2>
-        </section>
-        <section id="contact" class="content">
-            <h2>Kontakt</h2>
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="container pt-4 pb-4">
-                <div class="row">
-                    <div class="col col-lg-6">
-                        <div class="d-flex justify-content-start">
-                            <a class="footer-link" href="#">
-                                <i class="bi bi-facebook"></i>
-                                Social Media
-                            </a>
-                        </div>
+                <div class="col col-lg-6">
+                    <div class="d-flex justify-content-start">
+                        <a class="footer-link" href="#">
+                            <i class="bi bi-facebook"></i>
+                            Social Media
+                        </a>
                     </div>
-                    <div class="col col-lg-6">
-                        <div class="d-flex justify-content-end">
-                            <a class="footer-link" href="#">Impressum</a>
-                        </div>
+                </div>
+                <div class="col col-lg-6">
+                    <div class="d-flex justify-content-end">
+                        <a class="footer-link" href="#">Impressum</a>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
