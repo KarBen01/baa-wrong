@@ -1,0 +1,35 @@
+/*
+ * Layouts
+ */
+html,body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+header {
+    min-height: 57px;
+}
+
+/*
+ * Navbar
+ */
+.navbar {
+    border-bottom: solid 1px #ffffff;
+}
+.nav-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.nav-link {
+    color: rgba(255,255,255,.8);
+}
+.nav-item.active > a {
+    color: #ffffff;
+    font-weight: bold;
+}
+.nav-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
