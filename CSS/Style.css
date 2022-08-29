@@ -34,8 +34,7 @@ h2 {
     background-color: #000000;
 }
 .nav-item {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem 0 1rem;
 }
 .nav-link {
     color: rgba(255,255,255,.8);
@@ -58,6 +57,7 @@ h2 {
 }
 .footer-link {
     color: #ffffff;
+    margin: 0 1rem 0 1rem;
 }
 .footer-link:hover {
     color: #ffffff;
