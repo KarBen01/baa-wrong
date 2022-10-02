@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="container-fluid" id="tmContainer">
+    <div class="pt-3 d-flex justify-content-center">
+        <div class="col-12 p-3 bg-light">
+            <div class="d-flex mb-3">
+                <h2 class="flex-grow-1 text-center mb-0" style="margin-left: 1.75rem;" id="newsMainHeader">Neuigkeiten</h2>
+                <i onclick="textEditable()" class="bi bi-pencil-square fs-3 my-auto hover-cursor" id="newsEditButton"></i>
+                <button class="btn btn-primary" onclick="saveText()" style="display: none; width: 60px; height: 42px;" id="newsSaveButton">Save</button>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="newsHeader" class="form-label fs-5">Überschrift</label>
+                    <input type="text" class="form-control" id="newsHeader" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="newsText" class="form-label fs-5">Text</label>
+                    <textarea class="form-control" id="newsText" rows="5" readonly></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

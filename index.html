@@ -4,130 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lorenz Hinterberger</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="Resources/images/logo.jpeg">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="JavaScripts/Script.js" defer></script>
+
 </head>
 <body>
 <header>
-    <nav class="navbar fixed-top navbar-expand-lg">
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#biography">Biographie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#program">Programm | Tickets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Kontakt</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand p-0" href="#"><img src="Resources/images/transparent_logo_white.png" height="35"
+                                                      alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#biography">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#program">Programm | Tickets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
     </nav>
 </header>
 <main>
+
+
     <div class="wrapper">
-        <section id="home" class="under content">
-            <div class="container">
-                <!--<h1>Lorenz Hinterberger</h1>
-                <img class="logo" src="Resources/Images/logo.jpeg">-->
+        <section id="home" class="under content d-flex p-0">
+            <div
+                    class="bg-img"
+            ></div>
+            <div class="container text-center font-monospace my-auto" style="z-index: 3;">
+                <img class="logo" src="Resources/Images/transparent_logo_white.png">
+                <div class="display-4">lomusikcomedy</div>
+
             </div>
         </section>
     </div>
-    <div class="d-flex over fadeFooter">
-        <div class="display-4 mx-auto mt-auto mb-2"><i class="bi bi-chevron-double-down"></i></div>
+    <div class="d-flex over fadeFooter font-monospace">
+        <div class="display-4 mb-3 mx-auto mt-auto  text-center clickable"><a
+                class="icon-link d-flex flex-column text-decoration-none" href="#biography"><i class="bi bi-person"></i><small
+                class="pt-2 fs-5">About me</small></a></div>
+        <div class="display-4 mb-3 mx-auto mt-auto mb-2 text-center clickable"><a
+                class="icon-link d-flex flex-column text-decoration-none" href="#program">
+            <div style="transform: rotate(-45deg);"><i class="bi bi-ticket"></i></div>
+            <small class="pt-2 fs-5">Tickets</small></a></div>
+        <div class="display-4 mb-3 mx-auto mt-auto mb-2 text-center clickable "><a
+                class="icon-link d-flex flex-column text-decoration-none" href="#contact"><i
+                class="bi bi-share"></i><small class="pt-2 fs-5">Kontakt</small></a></div>
     </div>
     <section id="biography" class="content">
-        <div class="d-flex flex-column flex-md-row align-items-center">
-            <div>
-                <img alt="..." src="Resources/Images/bio1.jpg"/>
-            </div>
-            <div class="px-5">
-                <h2>Biographie</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis
-                    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-                    eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-                    luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="program" class="content">
-        <div class="d-flex flex-column flex-md-row align-items-center">
-            <div class="px-5">
-                <h2>Tickets</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis
-                    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-                    eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-                    luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                </p>
-            </div>
-            <div>
-                <img alt="..." src="Resources/Images/tickets1.jpg"/>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="content">
-        <div class="d-flex flex-column flex-md-row align-items-center">
-            <div>
-                <img alt="..." src="Resources/Images/contact1.jpg"/>
-            </div>
-            <div class="px-5">
-                <h2>Kontakt</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis
-                    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-                    eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-                    luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                </p>
-            </div>
+        <div class="row">
+            <div class="col-12 col-md-7">
+                <div class="d-flex flex-column h-100">
+                    <div class="my-auto ps-4 pe-4 pe-md-0 ">
+                        <div class="display-5 mb-3 pb-3 pt-3 border-bottom">Über Lo</div>
 
+                        <p>
+                            Angefangen als Musiker in seiner Schulband bereits im Jahr 2008 hat Lorenz Hinterberger
+                            später
+                            bemerkt, dass er nicht allzu viel Talent hat. Was allerdings im Showbusiness auch nicht so
+                            wichtig ist.
+                            Weil auch wenn eine exzellente künstlerische Performance etwas durchaus Schönes sein kann:
+                            Am Ende des Tages geht es bei jeder Show nur darum, dass das Publikum einen unterhaltsamen
+                            Abend gehabt hat.
+                        </p>
+
+                        <p>
+                            "Lo" ist jetzt ein Millenial der gerne Rockstar wäre, bis dato allerdings noch ein
+                            einfacher, gemeiner
+                            AHS-Lehrer ist. Moderne Musik-Comedy trifft auf klassische Standup-Comedy.
+                            Eingängige Melodien zum Mitsingen und pointierte Publikumsinteraktion sind bei jeder Show
+                            garantiert.
+                            Das erste Programm "Gelegenheit Macht Liebe" war von 2019-2021 jedes Mal ausverkauft,
+                            das zweite Programm "Was willst du machen" debütiert im Frühjahr 2023.
+                        </p>
+                        <p>
+                            Geht’s hin. Es wird witzig.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 ">
+                <img alt="..." src="Resources/Images/bio2.png"/>
+            </div>
+        </div>
+    </section>
+    <div class="b-w"></div>
+    <section id="program" class="content">
+        <div class="row">
+            <div class="col-12 col-md-5 d-flex order-2 order-md-1">
+                <img src="Resources/images/termine3.jpg" alt="TicketsImage">
+            </div>
+            <div class="col-12 col-md-7 order-1 order-md-2">
+                <div class="d-flex flex-column h-100">
+                    <div class="pe-4 ps-4">
+                        <div class="display-5 text-center mb-3 pb-3 pt-3 border-bottom border-dark">Tickets</div>
+                        <a class="row clickable text-decoration-none text-dark shadow p-2 mb-3 bg-body rounded" href="https://slamifyoucan.kupfticket.at/events/perger-comedy-night-vol-2/" target="_blank">
+                            <div class="col d-flex display-7">
+                                <div class="text-center fw-bold ">
+                                    <div>
+                                        15.10
+                                    </div>
+                                    <div>
+                                        2022
+                                    </div>
+                                </div>
+                                <div class="border-end border-dark mx-3"></div>
+                                <div class="my-auto ">
+                                    Perg, Mixshow
+                                </div>
+                                <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <a class="row text-decoration-none text-dark clickable shadow p-2 mb-3 bg-body rounded" href="https://www.eventbrite.com/e/221022-gelegenheit-macht-liebe-noch-ein-letztes-mal-tickets-420351742377" target="_blank">
+                            <div class="col d-flex display-7">
+                                <div class="text-center fw-bold ">
+                                    <div>
+                                        22.10
+                                    </div>
+                                    <div>
+                                        2022
+                                    </div>
+                                </div>
+                                <div class="border-end border-dark mx-3"></div>
+                                <div class="my-auto ">
+                                    Wien, Soloshow: Gelegenheit macht Liebe
+                                </div>
+                                <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <a class="row clickable text-decoration-none text-dark shadow p-2 mb-3 bg-body rounded" href="https://www.eventbrite.com/e/chipscomedy-kostenlose-comedy-show-in-wien-2710-tickets-427901393587?aff=ebdssbdestsearch&keep_tld=1" target="_blank">
+                            <div class="col d-flex display-7">
+                                <div class="text-center fw-bold ">
+                                    <div>
+                                        27.10
+                                    </div>
+                                    <div>
+                                        2022
+                                    </div>
+                                </div>
+                                <div class="border-end border-dark mx-3"></div>
+                                <div class="my-auto ">
+                                    Wien, Chips & Comedy
+                                </div>
+                                <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
+                            </div>
+                        </a>
+                        <a class="row clickable text-decoration-none text-dark shadow p-2 mb-3 bg-body rounded" href="https://www.eventbrite.com/e/comedy-im-horsaal-wien-tickets-430156027257?fbclid=IwAR2EjbbL9Oa3VZK5zVFMYldCtEM3zk6ZmtoW8abQZjGA7-DjJ5dAGQaDNEg" target="_blank">
+                            <div class="col d-flex display-7">
+                                <div class="text-center fw-bold ">
+                                    <div>
+                                        23.11
+                                    </div>
+                                    <div>
+                                        2022
+                                    </div>
+                                </div>
+                                <div class="border-end border-dark mx-3"></div>
+                                <div class="my-auto ">
+                                    Wien, Mixshow: Comedy im Hörsaal
+                                </div>
+                                <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="w-b"></div>
+    <section id="contact" class="content">
+        <div class="row flex-column-reverse flex-md-row mb-5">
+            <div class="col-12 col-md-7">
+                <div class="d-flex flex-column h-100">
+                    <div class="my-auto ps-4 pe-4 pe-md-0 text-center ">
+                        <div class="display-5 mb-3 pb-3 pt-3 border-bottom">Kontakt</div>
+                        <p>
+                            <div> Bei Anfragen, schreibe mir einfach ein Mail unter </div>
+                        <div><a href="mailto:lorenzmachtcomedy@gmail.at
+" class="icon-link text-decoration-none">lorenzmachtcomedy@gmail.com
+                        </a></div>
+                        </p>
+                        <p class="pt-3">
+                            ...und schau gerne auf meinen Socials vorbei
+                        </p>
+                        <div class="row row-cols-2 g-4 fs-1">
+                            <a class="col clickable text-decoration-none text-white" href="https://www.tiktok.com/@lomusikcomedy" target="_blank">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                            <a class="col clickable text-decoration-none text-white" href="https://www.youtube.com/channel/UCD_gab6lF2R6WZ_ttDMTlig/featured" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                            <a class="col clickable text-decoration-none text-white" href="https://www.instagram.com/lomusikcomedy/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a class="col clickable text-decoration-none text-white" href="https://www.facebook.com/LoMusikComedy" target="_blank">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 d-flex">
+                <img alt="..." src="Resources/Images/contact4.jpg"/>
+            </div>
         </div>
     </section>
 </main>
@@ -136,6 +238,7 @@
         <div class="container pt-4 pb-4">
             <div class="row">
                 <div class="col col-lg-6">
+                    <!--
                     <div class="d-flex justify-content-start">
                         <a class="footer-link" href="#">
                             <i class="bi bi-facebook"></i>
@@ -149,16 +252,20 @@
                         <a class="footer-link" href="#">
                             <i class="bi bi-youtube"></i>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="col col-lg-6">
                     <div class="d-flex justify-content-end">
-                        <a class="footer-link" href="#">Impressum</a>
+                        <a class="footer-link" href="./impressum">Impressum</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 </body>
 </html>
