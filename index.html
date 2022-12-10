@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="Resources/images/logo.jpeg">
+    <link rel="icon" href="./Resources/Images/logo.jpeg">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,8 +21,8 @@
 <header>
     <nav class="navbar navbar-dark navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="#"><img src="Resources/images/transparent_logo_white.png" height="35"
-                                                      alt="Logo"></a>
+            <a class="navbar-brand p-0" href="#"><img src="./Resources/Images/transparent_logo_white.png" height="35"
+            ></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#biography">About me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#program">Programm | Tickets</a>
+                        <a class="nav-link" href="#program">Tickets</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Kontakt</a>
@@ -96,8 +96,7 @@
                             AHS-Lehrer ist. Moderne Musik-Comedy trifft auf klassische Standup-Comedy.
                             Eingängige Melodien zum Mitsingen und pointierte Publikumsinteraktion sind bei jeder Show
                             garantiert.
-                            Das erste Programm "Gelegenheit Macht Liebe" war von 2019-2021 jedes Mal ausverkauft,
-                            das zweite Programm "Was willst du machen" debütiert im Frühjahr 2023.
+                            Das erste Programm "Gelegenheit Macht Liebe" war von 2019-2021 jedes Mal ausverkauft.
                         </p>
                         <p>
                             Geht’s hin. Es wird witzig.
@@ -107,7 +106,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-5 ">
-                <img alt="..." src="Resources/Images/bio2.png"/>
+                <img class="img-black" alt="..." src="Resources/Images/bio2.png"/>
             </div>
         </div>
     </section>
@@ -115,80 +114,30 @@
     <section id="program" class="content">
         <div class="row">
             <div class="col-12 col-md-5 d-flex order-2 order-md-1">
-                <img src="Resources/images/termine3.jpg" alt="TicketsImage">
+                <img src="Resources/Images/termine3.jpg" alt="TicketsImage">
             </div>
             <div class="col-12 col-md-7 order-1 order-md-2">
                 <div class="d-flex flex-column h-100">
                     <div class="pe-4 ps-4">
                         <div class="display-5 text-center mb-3 pb-3 pt-3 border-bottom border-dark">Tickets</div>
-                        <a class="row clickable text-decoration-none text-dark shadow p-2 mb-3 bg-body rounded" href="https://slamifyoucan.kupfticket.at/events/perger-comedy-night-vol-2/" target="_blank">
-                            <div class="col d-flex display-7">
-                                <div class="text-center fw-bold ">
-                                    <div>
-                                        15.10
+                        <div show-container id="showContainer">
+                            <template termin-template>
+                                <a class="row clickable text-decoration-none text-dark shadow p-2 mb-3 bg-body rounded" target="_blank" termin-link>
+                                    <div class="col d-flex display-7">
+                                        <div class="text-center fw-bold ">
+                                            <div termin-date-day>
+                                            </div>
+                                            <div termin-date-year>
+                                            </div>
+                                        </div>
+                                        <div class="border-end border-dark mx-3"></div>
+                                        <div class="my-auto " termin-title>
+                                        </div>
+                                        <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
                                     </div>
-                                    <div>
-                                        2022
-                                    </div>
-                                </div>
-                                <div class="border-end border-dark mx-3"></div>
-                                <div class="my-auto ">
-                                    Perg, Mixshow
-                                </div>
-                                <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
-                            </div>
-                        </a>
-                        <a class="row text-decoration-none text-dark clickable shadow p-2 mb-3 bg-body rounded" href="https://www.eventbrite.com/e/221022-gelegenheit-macht-liebe-noch-ein-letztes-mal-tickets-420351742377" target="_blank">
-                            <div class="col d-flex display-7">
-                                <div class="text-center fw-bold ">
-                                    <div>
-                                        22.10
-                                    </div>
-                                    <div>
-                                        2022
-                                    </div>
-                                </div>
-                                <div class="border-end border-dark mx-3"></div>
-                                <div class="my-auto ">
-                                    Wien, Soloshow: Gelegenheit macht Liebe
-                                </div>
-                                <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
-                            </div>
-                        </a>
-                        <a class="row clickable text-decoration-none text-dark shadow p-2 mb-3 bg-body rounded" href="https://www.eventbrite.com/e/chipscomedy-kostenlose-comedy-show-in-wien-2710-tickets-427901393587?aff=ebdssbdestsearch&keep_tld=1" target="_blank">
-                            <div class="col d-flex display-7">
-                                <div class="text-center fw-bold ">
-                                    <div>
-                                        27.10
-                                    </div>
-                                    <div>
-                                        2022
-                                    </div>
-                                </div>
-                                <div class="border-end border-dark mx-3"></div>
-                                <div class="my-auto ">
-                                    Wien, Chips & Comedy
-                                </div>
-                                <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
-                            </div>
-                        </a>
-                        <a class="row clickable text-decoration-none text-dark shadow p-2 mb-3 bg-body rounded" href="https://www.eventbrite.com/e/comedy-im-horsaal-wien-tickets-430156027257?fbclid=IwAR2EjbbL9Oa3VZK5zVFMYldCtEM3zk6ZmtoW8abQZjGA7-DjJ5dAGQaDNEg" target="_blank">
-                            <div class="col d-flex display-7">
-                                <div class="text-center fw-bold ">
-                                    <div>
-                                        23.11
-                                    </div>
-                                    <div>
-                                        2022
-                                    </div>
-                                </div>
-                                <div class="border-end border-dark mx-3"></div>
-                                <div class="my-auto ">
-                                    Wien, Mixshow: Comedy im Hörsaal
-                                </div>
-                                <div class="my-auto ms-auto fs-1"><i class="bi bi-chevron-right"></i></div>
-                            </div>
-                        </a>
+                                </a>
+                            </template>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,7 +151,7 @@
                     <div class="my-auto ps-4 pe-4 pe-md-0 text-center ">
                         <div class="display-5 mb-3 pb-3 pt-3 border-bottom">Kontakt</div>
                         <p>
-                            <div> Bei Anfragen, schreibe mir einfach ein Mail unter </div>
+                        <div> Bei Anfragen, schreibe mir einfach ein Mail unter</div>
                         <div><a href="mailto:lorenzmachtcomedy@gmail.at
 " class="icon-link text-decoration-none">lorenzmachtcomedy@gmail.com
                         </a></div>
@@ -211,16 +160,20 @@
                             ...und schau gerne auf meinen Socials vorbei
                         </p>
                         <div class="row row-cols-2 g-4 fs-1">
-                            <a class="col clickable text-decoration-none text-white" href="https://www.tiktok.com/@lomusikcomedy" target="_blank">
+                            <a class="col clickable text-decoration-none text-white"
+                               href="https://www.tiktok.com/@lomusikcomedy" target="_blank">
                                 <i class="bi bi-tiktok"></i>
                             </a>
-                            <a class="col clickable text-decoration-none text-white" href="https://www.youtube.com/channel/UCD_gab6lF2R6WZ_ttDMTlig/featured" target="_blank">
+                            <a class="col clickable text-decoration-none text-white"
+                               href="https://www.youtube.com/channel/UCD_gab6lF2R6WZ_ttDMTlig/featured" target="_blank">
                                 <i class="bi bi-youtube"></i>
                             </a>
-                            <a class="col clickable text-decoration-none text-white" href="https://www.instagram.com/lomusikcomedy/" target="_blank">
+                            <a class="col clickable text-decoration-none text-white"
+                               href="https://www.instagram.com/lomusikcomedy/" target="_blank">
                                 <i class="bi bi-instagram"></i>
                             </a>
-                            <a class="col clickable text-decoration-none text-white" href="https://www.facebook.com/LoMusikComedy" target="_blank">
+                            <a class="col clickable text-decoration-none text-white"
+                               href="https://www.facebook.com/LoMusikComedy" target="_blank">
                                 <i class="bi bi-facebook"></i>
                             </a>
                         </div>

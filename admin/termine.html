@@ -1,52 +1,51 @@
 <div class="container-fluid" id="datesContainer">
     <div class="pt-3 d-flex justify-content-center">
-        <div class="col-12 p-3 bg-light">
-            <h2 class="py-3 text-center">Shows</h2>
-            <div id="shows">
-                <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col-12 p-3">
+            <div class="d-flex justify-content-between py-3"><h2>Shows </h2><button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#addShowModal"><i
+                    class="fa fa-plus"></i> Neu</button></div>
+            <div class="row row-cols-1 row-cols-md-2 g-4" show-container id="showContainer">
+                <template termin-template>
                     <div class="col">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h5 class="card-title">Solo Show 1</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title"><span termin-date></span> - <span termin-title></span></h5>
+                                <a class="card-text" termin-link> </a>
+                                <div class="pt-3 mt-3 border-top  d-grid gap-2">
+                                    <button class="btn btn-outline-danger d-flex justify-content-center align-items-center" type="button" termin-button></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Solo Show2</h5>
-                                <p class="card-text">This is a short card.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </template>
             </div>
         </div>
     </div>
-    <div class="pt-3 d-flex justify-content-center">
-        <div class="col-12 p-3 bg-light">
-            <h2 class="pb-3 text-center">Termine</h2>
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-                    <div class="input-group mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Show auswählen</option>
-                            <option value="1">Solo Show 1</option>
-                            <option value="2">Solo Show 2</option>
-                        </select>
-                        <input type="datetime-local" style="max-width: 50%;" aria-label="Datum" class="form-control"
-                               placeholder="Preis" id="price">
-                        <button class="btn btn-success" type="button" onclick="addShowDate()"><i
-                                class="fa fa-plus"></i></button>
-                    </div>
-                </div>
+</div>
+<div class="modal fade" id="addShowModal" tabindex="-1" aria-labelledby="addShowModalLabel" aria-hidden="true" show-modal>
+    <div class="modal-dialog modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" modal-header>New Show</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-                    <ul class="list-group fs-5" id="showDates">
-                    </ul>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="showDate" class="form-label">Datum</label>
+                    <input type="date" class="form-control" id="showDate" modal-date>
                 </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Show Name</label>
+                    <input type="text" class="form-control" id="title" placeholder="Show Title" modal-title>
+                </div>
+                <div class="mb-3">
+                    <label for="link" class="form-label">Ticket Link</label>
+                    <input type="link" class="form-control" id="link" modal-link>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addShow()">Save changes</button>
             </div>
         </div>
     </div>

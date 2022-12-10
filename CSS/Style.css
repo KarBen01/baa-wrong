@@ -104,8 +104,8 @@ section{
 
 .bg-img{
     margin-left: -150px;
-    height: calc(100vh - 207px);
-    background: url(../Resources/Images/main2.jpg) no-repeat left;
+    height: 100vh;
+    background: url(../Resources/Images/main2.jpg) no-repeat left top;
     background-size: cover;
     overflow: hidden;
     position: absolute;
@@ -147,7 +147,7 @@ section{
 .logo{
 
     border-radius: 50%;
-    width: calc(100px + 10vw);
+    width: calc(50px + 6vw);
     background-image: linear-gradient(transparent, black);
     z-index: 10;
 }
@@ -185,14 +185,7 @@ section{
 
 
 
-#biography .row .col-12{
-     padding: 0;
- }
 
-
-#program .row .col-12{
-    padding: 0;
-}
 
 #admin-body{
     background-color: #a1a1a1;
@@ -211,4 +204,10 @@ section{
 #program{
     background-color: white;
     color: black;
+}
+
+.img-black{
+    -webkit-mask-image: linear-gradient(to top, black, transparent),
+    linear-gradient(to right, black, transparent);
+    mask-image: linear-gradient(black, transparent);
 }

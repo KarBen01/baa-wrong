@@ -34,10 +34,10 @@ if (isset($_POST["logout"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="./CSS/Style.css">
+
     <script src="https://kit.fontawesome.com/259afa04ac.js" crossorigin="anonymous"></script>
 </head>
-<body id="admin-body">
+<body id="admin-body" class="bg-light">
 <?php
 if (isset($_SESSION["user"])) {
     ?>
@@ -50,10 +50,7 @@ if (isset($_SESSION["user"])) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link <?php  if(!isset($_GET["site"])){ echo 'active';} ?>" aria-current="page" href="index.php">Termine</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php  if(isset($_GET["site"]) && $_GET["site"] == "tb"){ echo 'active';} ?>" href="?site=tb">Textbausteine</a>
+                        <a class="nav-link <?php  if(!isset($_GET["site"])){ echo 'active';} ?>" aria-current="page" href="index.php">Shows</a>
                     </li>
                 </ul>
                 <form action="index.php" method="post">
@@ -63,12 +60,7 @@ if (isset($_SESSION["user"])) {
         </div>
     </nav>
     <?php
-    if(isset($_GET["site"]) && $_GET["site"] == "tb"){
-        include "textbausteine.html";
-    }
-    else {
         include "termine.html";
-    }
 }
 else {
 
@@ -112,7 +104,7 @@ else {
 <?php
 if(isset($_SESSION["user"])){
     ?>
-    <script src="admin/Script.js"></script>
+    <script src="./Script.js"></script>
     <?php
 }
 ?>
