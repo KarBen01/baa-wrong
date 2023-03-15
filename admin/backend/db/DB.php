@@ -17,18 +17,18 @@ class DB
 
     function __construct()
     {
-    /*
+
         $this->host = 'mysqlsvr77.world4you.com';
         $this->user = 'sql5616139';
         $this->password = 'v2aur+72';
         $this->database = '5289407db1';
-*/
 
+/*
         $this->host = 'localhost';
         $this->user = 'root';
         $this->password = '';
         $this->database = '5289407db1';
-
+*/
 
         $this->connect = new mysqli($this->host, $this->user, $this->password, $this->database);
         $this->connect->set_charset("utf8");
