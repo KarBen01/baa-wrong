@@ -81,8 +81,9 @@ class Show
      * @param $title
      * @param $link
      */
-    public function __construct($date, $title, $link)
+    public function __construct($id, $date, $title, $link)
     {
+        $this->id = $id;
         $this->date = $date;
         $this->title = $title;
         $this->link = $link;

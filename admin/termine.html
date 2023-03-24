@@ -1,17 +1,26 @@
 <div class="container-fluid" id="datesContainer">
     <div class="pt-3 d-flex justify-content-center">
         <div class="col-12 p-3">
-            <div class="d-flex justify-content-between py-3"><h2>Shows </h2><button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#addShowModal"><i
-                    class="fa fa-plus"></i> Neu</button></div>
+            <div class="d-flex justify-content-between py-3"><h2>Shows </h2>
+                <button class="btn btn-success" type="button" data-bs-toggle="modal" id="newShowBtn" data-bs-target="#addShowModal"><i
+                        class="fa fa-plus"></i> Neu
+                </button>
+            </div>
             <div class="row row-cols-1 row-cols-md-2 g-4" show-container id="showContainer">
                 <template termin-template>
                     <div class="col">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h5 class="card-title"><span termin-date></span> - <span termin-title></span></h5>
+                                <div class="d-flex justify-content-between mb-3"><h5 class="my-auto card-title"><span termin-date></span> - <span
+                                        termin-title></span></h5>
+                                    <button class="ms-3 my-auto btn btn-outline-primary" edit-termin-button type="button"><i
+                                            class="fa fa-pencil"></i>
+                                    </button>
+                                </div>
                                 <a class="card-text" termin-link> </a>
                                 <div class="pt-3 mt-3 border-top  d-grid gap-2">
-                                    <button class="btn btn-outline-danger d-flex justify-content-center align-items-center" type="button" termin-button></button>
+                                    <button class="btn btn-outline-danger d-flex justify-content-center align-items-center"
+                                            type="button" termin-button></button>
                                 </div>
                             </div>
                         </div>
@@ -21,7 +30,8 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="addShowModal" tabindex="-1" aria-labelledby="addShowModalLabel" aria-hidden="true" show-modal>
+<div class="modal fade" id="addShowModal" tabindex="-1" aria-labelledby="addShowModalLabel" aria-hidden="true"
+     show-modal>
     <div class="modal-dialog modal-fullscreen-sm-down">
         <div class="modal-content">
             <div class="modal-header">
@@ -39,13 +49,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="link" class="form-label">Ticket Link</label>
-                    <input type="link" class="form-control" id="link" modal-link>
+                    <input type="link" class="form-control" id="link" placeholder="Link zum Ticketverkauf" modal-link>
                 </div>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="addShow()">Save changes</button>
+                <button type="button" class="btn btn-primary" onclick="addShow()" id="save-btn">Save changes</button>
             </div>
         </div>
     </div>

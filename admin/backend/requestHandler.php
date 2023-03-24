@@ -25,19 +25,27 @@ if (!empty($_POST)) {
     switch ($jsonObj->func) {
         case "InsertShow":
         {
-            $valid = true;
-
             $date = $jsonObj->date;
             $title = $jsonObj->title;
             $link = $jsonObj->link;
             $method = "InsertShow";
-            $param = new Show($date, $title, $link);
+            $param = new Show(null,$date, $title, $link);
             break;
         }
         case "DeleteShow":
         {
             $param = $jsonObj->id;
             $method = "DeleteShow";
+            break;
+        }
+        case "UpdateShow":
+        {
+            $id = $jsonObj->id;
+            $date = $jsonObj->date;
+            $title = $jsonObj->title;
+            $link = $jsonObj->link;
+            $method = "UpdateShow";
+            $param = new Show($id,$date, $title, $link);
             break;
         }
     }

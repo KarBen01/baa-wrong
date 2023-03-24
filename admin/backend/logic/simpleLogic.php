@@ -31,6 +31,11 @@ class simpleLogic
                 $res = $this->db->DeleteShow($param);
                 break;
             }
+            case "UpdateShow":
+            {
+                $res = $this->db->UpdateShow($param);
+                break;
+            }
             default: {
                 $res = null;
                 break;

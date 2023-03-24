@@ -17,18 +17,18 @@ class DB
 
     function __construct()
     {
-
+/*
         $this->host = 'mysqlsvr77.world4you.com';
         $this->user = 'sql5616139';
         $this->password = 'v2aur+72';
         $this->database = '5289407db1';
+*/
 
-/*
         $this->host = 'localhost';
         $this->user = 'root';
         $this->password = '';
         $this->database = '5289407db1';
-*/
+
 
         $this->connect = new mysqli($this->host, $this->user, $this->password, $this->database);
         $this->connect->set_charset("utf8");
@@ -44,8 +44,7 @@ class DB
         $result = $this->connect->query("SELECT * FROM shows ORDER BY DATE(date) asc");
 
         while ($data = $result->fetch_assoc()) {
-            $tempShow = new Show($data["date"], $data["title"], $data["link"]);
-            $tempShow->setId($data["id"]);
+            $tempShow = new Show($data["id"], $data["date"], $data["title"], $data["link"]);
             $shows[] = $tempShow;
         }
         if(empty($shows)){
@@ -75,5 +74,19 @@ class DB
         $stmt = $this->connect->prepare($sql);
         $stmt->bind_param("i", $id);
         return $stmt->execute();
+    }
+
+    function UpdateShow($show)
+    {
+        $id = $show->getId();
+        $sql = "UPDATE shows SET date = ?, title = ?, link = ?  WHERE id = $id;";
+        $stmt = $this->connect->prepare($sql);
+        $date = $show->getDate();
+        $title = $show->getTitle();
+        $link = $show->getLink();
+
+        $stmt->bind_param("sss", $date, $title, $link);
+        $stmt->execute();
+        return $id;
     }
 }
