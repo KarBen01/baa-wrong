@@ -3,15 +3,14 @@
 session_start();
 
 
-$username = '$2y$10$jOywGUI.PW3HD/6e.9uXO.WlilEUO6wSU0CfyKB3sRflMFrpMPUau';
-$password = '$2y$10$y4WG8M8CC4qkdvBBg1hqqOG.qsjLX/4q05fCM0yOW4Pq2gUuUTwym';
-
+$username = 'admin';
+$password = '1234';
 if (isset($_POST["login"])) {
     $loginUsername = $_POST["username"];
     $loginPassword = $_POST["password"];
 
 
-    if (password_verify($loginUsername, $username) && password_verify($loginPassword, $password)) {
+    if ($loginUsername == $username && $loginPassword == $password) {
         $_SESSION["user"] = $username;
     } else {
         echo "Ungültiges Passwort";
@@ -26,35 +25,36 @@ if (isset($_POST["logout"])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Lo | Musikcomedy</title>
+    <title>Benni | Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
     <script src="https://kit.fontawesome.com/259afa04ac.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/Style.css">
 </head>
-<body id="admin-body" class="bg-light">
+<body id="admin-body" class="bg-white">
 <?php
 if (isset($_SESSION["user"])) {
     ?>
     <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Administration | Lo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.php">Administration | Benni</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <ul class="navbar-nav mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link <?php  if(!isset($_GET["site"])){ echo 'active';} ?>" aria-current="page" href="index.php">Shows</a>
+                        <a class="nav-link <?php  if(!isset($_GET["site"])){ echo 'active';} ?>" href="index.php">Shows</a>
                     </li>
                 </ul>
                 <form action="index.php" method="post">
-                    <button class="btn btn-danger" type="submit" name="logout">Logout</button>
+                    <button class="btn" style="color: #737373" type="submit" name="logout"><i class="fas fa-sign-out"></i></button>
                 </form>
             </div>
         </div>

@@ -2,8 +2,8 @@
     <div class="pt-3 d-flex justify-content-center">
         <div class="col-12 p-3">
             <div class="d-flex justify-content-between py-3"><h2>Shows </h2>
-                <button class="btn btn-success" type="button" data-bs-toggle="modal" id="newShowBtn" data-bs-target="#addShowModal"><i
-                        class="fa fa-plus"></i> Neu
+                <button class="btn" type="button" data-bs-toggle="modal" id="newShowBtn" data-bs-target="#addShowModal"><i
+                        class="fa fa-plus"></i>
                 </button>
             </div>
             <div class="row row-cols-1 row-cols-md-2 g-4" show-container id="showContainer">
@@ -11,17 +11,15 @@
                     <div class="col">
                         <div class="card h-100">
                             <div class="card-body">
-                                <div class="d-flex justify-content-between mb-3"><h5 class="my-auto card-title"><span termin-date></span> - <span
+                                <div class="d-flex mb-3"><h5 class="my-auto me-auto card-title"><span termin-date></span> - <span
                                         termin-title></span></h5>
-                                    <button class="ms-3 my-auto btn btn-outline-primary" edit-termin-button type="button"><i
+                                    <button class="ms-3 btn" edit-termin-button type="button"><i
                                             class="fa fa-pencil"></i>
                                     </button>
-                                </div>
-                                <a class="card-text" termin-link> </a>
-                                <div class="pt-3 mt-3 border-top  d-grid gap-2">
-                                    <button class="btn btn-outline-danger d-flex justify-content-center align-items-center"
+                                    <button class="btn d-flex justify-content-center align-items-center"
                                             type="button" termin-button></button>
                                 </div>
+                                <a class="card-text" termin-link> </a>
                             </div>
                         </div>
                     </div>
@@ -30,32 +28,32 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="addShowModal" tabindex="-1" aria-labelledby="addShowModalLabel" aria-hidden="true"
+<div class="modal fade" id="addShowModal"
      show-modal>
     <div class="modal-dialog modal-fullscreen-sm-down">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" modal-header>New Show</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" modal-header>Neue Show</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <div class="mb-3">
-                    <label for="showDate" class="form-label">Datum</label>
+                    <label class="form-label">Datum</label>
                     <input type="date" class="form-control" id="showDate" modal-date>
                 </div>
                 <div class="mb-3">
-                    <label for="title" class="form-label">Show Name</label>
+                    <label class="form-label">Show Name</label>
                     <input type="text" class="form-control" id="title" placeholder="Show Title" modal-title>
                 </div>
                 <div class="mb-3">
-                    <label for="link" class="form-label">Ticket Link</label>
-                    <input type="link" class="form-control" id="link" placeholder="Link zum Ticketverkauf" modal-link>
+                    <label class="form-label">Ticket Link</label>
+                    <input type="text" class="form-control" id="link" placeholder="Link zum Ticketverkauf" modal-link>
                 </div>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="addShow()" id="save-btn">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                <button type="button" class="btn btn-primary" onclick="addShow()" id="save-btn">Änderungen speichern</button>
             </div>
         </div>
     </div>

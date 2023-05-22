@@ -8,6 +8,18 @@ $("#newShowBtn").click(function () {
     document.getElementById("title").value = "";
     document.getElementById("link").value = "";
 
+
+        $("#valDate").removeClass("show");
+        $("#valTitle").removeClass("show");
+        $("#valLink").removeClass("show");
+
+    const header = modal.querySelector("[modal-header]");
+
+    header.textContent = "Show hinzufügen";
+
+    $("#save-btn")[0].textContent = "Show hinzufügen";
+
+
     $("#save-btn")[0].onclick = (function () {
         return function () {
             addShow()
@@ -74,8 +86,8 @@ function addCard(pElement) {
 
     let lId = pElement.id;
 
-    let text = createElementWithClass("span", "");
-    text.textContent = " Löschen";
+    let text = createElementWithClass("i", "fa fa-trash");
+
 
     btn.append(text);
 
@@ -98,8 +110,9 @@ function editShow(showId) {
     var show = shows.find(item => item.id === showId);
     const header = modal.querySelector("[modal-header]");
 
-    header.textContent = "Edit Show";
+    header.textContent = "Show bearbeiten";
 
+    $("#save-btn")[0].textContent = "Änderung speichern"
 
     $("#save-btn")[0].onclick = (function (lId) {
         return function () {
@@ -144,6 +157,7 @@ function updateShow(pId) {
     let lTitle = $("#title").val();
     let lLink = $("#link").val();
 
+
     if (lDate !== '' && lTitle !== '' && lLink !== '') {
         var myModal = bootstrap.Modal.getInstance(modal)
         myModal.hide();
@@ -178,6 +192,7 @@ function addShow() {
     let lDate = $("#showDate").val();
     let lTitle = $("#title").val();
     let lLink = $("#link").val();
+
 
     if (lDate !== '' && lTitle !== '' && lLink !== '') {
         var myModal = bootstrap.Modal.getInstance(modal)
